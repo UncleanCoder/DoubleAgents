@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         uiDocument.visualTreeAsset = gameOverAsset;
-        Debug.Log("Game Over Punk");
+    }
+    public void StartGame()
+    {
+        uiDocument.visualTreeAsset = gameOverAsset;
     }
 }
