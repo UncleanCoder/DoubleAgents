@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:Label tabindex="-1" text="Game Over&#10;You&apos;re Been Detected" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GameOverLabel" style="align-items: center; justify-content: center; align-self: center; -unity-font-style: bold; font-size: 60%; -unity-text-outline-color: rgba(56, 56, 56, 0); color: rgb(188, 40, 40); -unity-text-align: middle-center;" />
+    </ui:VisualElement>
+</ui:UXML>

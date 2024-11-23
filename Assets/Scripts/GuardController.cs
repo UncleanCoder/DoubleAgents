@@ -12,6 +12,11 @@ public class GuardController : MonoBehaviour
 
     void Update()
     {
+        MoveTowardWaypoint();
+    }
+
+    private void MoveTowardWaypoint()
+    {
         if (isWaiting) return;
 
         Transform targetWaypoint = waypoints[currentWaypointIndex];
@@ -38,5 +43,15 @@ public class GuardController : MonoBehaviour
         isWaiting = false;
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
     }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player Spotted! Game Over.");
+        }
+    }
+
 }
 
