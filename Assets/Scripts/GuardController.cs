@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GuardController : MonoBehaviour
@@ -8,17 +7,8 @@ public class GuardController : MonoBehaviour
     public float waitTime = 5f;
     public Transform[] waypoints;
 
-    private int spriteRotationDegrees = 90;
-    private Rigidbody2D rb;
-    private Vector2 moveDirectionRequested = Vector2.zero;
-
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     void Update()
     {
