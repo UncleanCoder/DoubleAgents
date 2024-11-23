@@ -22,38 +22,19 @@ public class GuardController : MonoBehaviour
 
     void Update()
     {
-        MoveTowardDestination();
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = moveDirectionRequested * speed;
-
-        if (moveDirectionRequested != Vector2.zero)
-        {
-            float angle = Mathf.Atan2(moveDirectionRequested.y, moveDirectionRequested.x) * Mathf.Rad2Deg;
-            rb.rotation = angle - spriteRotationDegrees;
-        }
-    }
-
-    private void MoveTowardDestination()
-    {
         if (isWaiting) return;
 
-        // Move towards the current waypoint
         Transform targetWaypoint = waypoints[currentWaypointIndex];
         Vector3 direction = (targetWaypoint.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, targetWaypoint.position);
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
 
-        // Rotate to face the direction of movement
         if (direction != Vector3.zero)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
         }
 
-        // Check if the guard has reached the waypoint
         if (distance < 0.001f)
         {
             StartCoroutine(WaitAtWaypoint());
@@ -63,10 +44,8 @@ public class GuardController : MonoBehaviour
     private IEnumerator WaitAtWaypoint()
     {
         isWaiting = true;
-        yield return new WaitForSeconds(1f); // Wait for 1 second at the waypoint
+        yield return new WaitForSeconds(waitTime);
         isWaiting = false;
-
-        // Move to the next waypoint, looping back to the start if at the end
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
     }
 }

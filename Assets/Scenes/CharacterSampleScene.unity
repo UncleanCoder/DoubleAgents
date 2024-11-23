@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waitTime
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.size
