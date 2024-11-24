@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: map
+    uniqueID: 2616965823
+    locked: 0
   - name: Underlays
     uniqueID: 771764047
     locked: 0
