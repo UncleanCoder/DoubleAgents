@@ -8,23 +8,23 @@ public class BuzzerDoor : MonoBehaviour
     public Sprite doorOpenSprite;
     public Sprite doorCloseSprite;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D collider;
+    private BoxCollider2D boxCollider;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     public void OpenDoor()
     {
         spriteRenderer.sprite = doorOpenSprite;
-        collider.enabled = false;
+        boxCollider.enabled = false;
     }
 
     public void CloseDoor()
     {
         spriteRenderer.sprite = doorCloseSprite;
-        collider.enabled = true;
+        boxCollider.enabled = true;
     }
 }

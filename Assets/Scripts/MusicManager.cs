@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] songs;
     private AudioSource audioSource;
     private int currentClipIndex = 0;
+    private bool enabled = true; 
 
     void Start()
     {
@@ -13,7 +15,7 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSource.isPlaying && enabled)
         {
             if (songs.Length > 0)
             {
@@ -22,6 +24,12 @@ public class MusicManager : MonoBehaviour
                 currentClipIndex = (currentClipIndex + 1) % songs.Length;
             }
         }
+    }
+
+    public void Disable()
+    {
+        enabled = false;
+        audioSource.Stop();
     }
 }
 

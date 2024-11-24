@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public VisualTreeAsset gameWonAsset;
     public VisualTreeAsset emptyUiAsset;
 
+    public AudioClip gameOver;
+    public AudioClip gameWon;
+
+    private MusicManager musicManager;
+    private AudioSource fxAudioSource;
     private UIDocument uiDocument;
     private List<PlayerController> playerControllers = new List<PlayerController>();
     private int activePlayerController = 0;
@@ -19,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>();
+        fxAudioSource = GetComponent<AudioSource>();
         uiDocument = GameObject.FindWithTag("MainCamera").GetComponent<UIDocument>();
         GameObject[] playerGameObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject go in playerGameObjects) {
@@ -37,12 +44,18 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameState = GameState.GameOver;
+        musicManager.Disable();
+        fxAudioSource.clip = gameOver;
+        fxAudioSource.Play();
         StopMovement();
         uiDocument.visualTreeAsset = gameOverAsset;
     }
     public void GameWon()
     {
         gameState = GameState.GameWon;
+        musicManager.Disable();
+        fxAudioSource.clip = gameWon;
+        fxAudioSource.Play();
         StopMovement();
         uiDocument.visualTreeAsset = gameWonAsset;
     }
