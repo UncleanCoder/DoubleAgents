@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af2687cc51e71649a5d4c80e37d22b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  waitTime: 5
+  speed: 7.5
+  waitTime: 2
   waypoints: []
 --- !u!1 &8424872710101789225
 GameObject:

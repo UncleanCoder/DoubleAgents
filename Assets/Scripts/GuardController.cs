@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class GuardController : MonoBehaviour
 {
-    public float speed = 5f;
-    public float waitTime = 5f;
+    public float speed;
+    public float waitTime;
     public Transform[] waypoints;
 
     private int currentWaypointIndex = 0;
