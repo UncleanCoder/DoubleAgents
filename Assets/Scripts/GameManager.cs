@@ -115,4 +115,9 @@ public class GameManager : MonoBehaviour
         playerControllers[activePlayerController].moveDirectionRequested = Vector2.zero;
         activePlayerController = (activePlayerController + 1) % playerControllers.Count;
     }
+
+    internal Transform getActivePlayerTransform()
+    {
+        return playerControllers[activePlayerController].transform;
+    }
 }
