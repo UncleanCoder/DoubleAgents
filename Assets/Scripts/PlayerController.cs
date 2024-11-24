@@ -7,26 +7,13 @@ public class PlayerController : MonoBehaviour
 
     private int spriteRotationDegrees = 90;
     private Rigidbody2D rb;
-    private Vector2 moveDirectionRequested = Vector2.zero;
+    public Vector2 moveDirectionRequested = Vector2.zero;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        switch (context.phase)
-        {
-            case InputActionPhase.Started:
-            case InputActionPhase.Performed:
-                moveDirectionRequested = context.ReadValue<Vector2>().normalized;
-                break;
-            default:
-                moveDirectionRequested = Vector2.zero;
-                break;
-        }
-    }
 
     void FixedUpdate()
     {
