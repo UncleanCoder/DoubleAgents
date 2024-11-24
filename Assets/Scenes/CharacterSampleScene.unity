@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -165,7 +165,19 @@ PrefabInstance:
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.data[5]
       value: 
+      objectReference: {fileID: 1748146513}
+    - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
+      propertyPath: waypoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1663877561}
+    - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
+      propertyPath: waypoints.Array.data[7]
+      value: 
       objectReference: {fileID: 1611169809}
+    - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
+      propertyPath: waypoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 2133278664}
     - target: {fileID: 4597826743255605458, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: m_Name
       value: SecurityGuard2
@@ -8021,7 +8033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -8047,6 +8059,14 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[5]
       value: 
       objectReference: {fileID: 1611169809}
+    - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
+      propertyPath: waypoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1663877561}
+    - target: {fileID: -22954210856605186, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
+      propertyPath: waypoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1748146513}
     - target: {fileID: 4597826743255605458, guid: 68ff581e3fc79f04593f4637b0729f52, type: 3}
       propertyPath: m_Name
       value: SecurityGuard2_2
