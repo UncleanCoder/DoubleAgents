@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f8bcaa4ee535b4c8b03626db78ebc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuAsset: {fileID: 9197481963319205126, guid: a4f025093540be144a6afc1672e75049, type: 3}
   gameOverAsset: {fileID: 9197481963319205126, guid: 23fcf2497b3e1e442a1f181457c870e7, type: 3}
+  gameWonAsset: {fileID: 9197481963319205126, guid: 61f84cb29259f444b81278c366275144, type: 3}
+  emptyUiAsset: {fileID: 9197481963319205126, guid: ce29ecc1191594144a756a7f327487e8, type: 3}
 --- !u!114 &2915256383641977719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +94,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8248778487822729653}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnSwitchCharacters
+        m_MethodName: OnEnter
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -103,6 +106,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 749f15b7-8904-432f-a3bd-feb2f5fac84b
     m_ActionName: Player/SwitchButton[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8248778487822729653}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnActionButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d590df89-7fa0-41c4-a5cf-e1c6a990e3d3
+    m_ActionName: Player/ActionButton[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

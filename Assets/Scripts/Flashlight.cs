@@ -13,7 +13,7 @@ public class Flashlight: MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManager.EndGame();
+            gameManager.GameOver();
         }
     }
 
