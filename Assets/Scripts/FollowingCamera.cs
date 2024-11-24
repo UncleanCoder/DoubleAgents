@@ -17,9 +17,6 @@ public class CameraFollow : MonoBehaviour
         Vector3 desiredPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
-
-        // Optional: Keep the camera looking at the player
-        //transform.LookAt(playerTransform);
     }
 }
 
