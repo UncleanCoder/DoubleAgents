@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BuzzerDoor
+  - NPC
   layers:
   - Default
   - TransparentFX

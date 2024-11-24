@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.GameLoop;
         uiDocument.visualTreeAsset = emptyUiAsset;
+        StartMovement();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -70,21 +71,22 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    public void OnActionButton(InputAction.CallbackContext context)
+
+    public void StartMovement()
     {
-        if (gameState != GameState.GameLoop)
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("NPC"))
         {
-            return;
-        }
-        if (context.phase == InputActionPhase.Started)
-        {
-            //TODO
+            go.GetComponent<GuardController>().Enable();
         }
     }
 
     public void StopMovement()
     {
         playerControllers[activePlayerController].moveDirectionRequested = Vector2.zero;
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("NPC"))
+        {
+            go.GetComponent<GuardController>().Disable();
+        }
     }
 
     public void OnEnter(InputAction.CallbackContext context)

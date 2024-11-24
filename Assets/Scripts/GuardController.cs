@@ -9,15 +9,32 @@ public class GuardController : MonoBehaviour
 
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
+    private bool isEnabled = true;
 
     void Update()
     {
         MoveTowardWaypoint();
     }
+    public void Enable()
+    {
+        isEnabled = true;
+    }
+
+    public void Disable()
+    {
+        isEnabled = false;
+    }
 
     private void MoveTowardWaypoint()
     {
-        if (isWaiting) return;
+        if (! isEnabled)
+        {
+            return;
+        }
+        if (isWaiting)
+        {
+            return;
+        }
 
         Transform targetWaypoint = waypoints[currentWaypointIndex];
         Vector3 direction = (targetWaypoint.position - transform.position).normalized;
